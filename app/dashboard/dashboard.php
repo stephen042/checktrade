@@ -170,10 +170,10 @@
 																			Trade In Progress
 																		</p>
 																		<p class="text-warning">
-																			60% completed
+																			<?=$pro_bar?>% completed
 																		</p>
 																		<div class="progress mt-1">
-																			<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width:60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+																			<div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width:<?=$pro_bar?>%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
 																			</div>
 																		</div>
 																	</div>

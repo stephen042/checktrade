@@ -20,6 +20,7 @@ include('conn.php');
 					$country = $row_session['ucountry'];
 					$reg_date = $row_session['u_datereg'];
 					$acct_status = $row_session['u_status'];
+					$pro_bar = $row_session['pro_bar'];
 					$user_uid = $row_session['user_id'];
 					$withdral_bal = $row_session['withraw_bal'];
 					$refbonus_bal = $row_session['u_ref_amt'];

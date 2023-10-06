@@ -5,13 +5,13 @@ include('session.php');
 
 if(isset($_POST['btn_submit']))
 {
-  $status_data = $_POST['status_data'];
+  $pro_bar = $_POST['pro_bar'];
   $user_id = $_POST['user_id'];
   
-  $result = mysqli_query($conn, "UPDATE user_tb SET status_level='$status_data' WHERE user_id='$user_id' ");
+  $result = mysqli_query($conn, "UPDATE user_tb SET pro_bar='$pro_bar' WHERE user_id='$user_id' ");
 
   if($result){
-    $msg = "Status Updated Successfully";
+    $msg = "Progress Bar Updated Successfully";
     echo ("<script>window.alert('$msg')</script>");
   }
 }
@@ -148,8 +148,8 @@ if(isset($_POST['btn_submit']))
                             <th class="column-title">Bitcoin Wallet </th>
                             <th class="column-title">Password </th>
                             <th class="column-title">Reg Date </th>
-                            <th class="column-title">Client Status </th>
-                            <th class="column-title">change Client Status </th>
+                            <!-- <th class="column-title">Client Status </th> -->
+                            <th class="column-title">Progress Bar </th>
                             <th class="column-title">Action </th>
                             <th class="column-title">Ai-Trade </th>
                             <th> </th>
@@ -168,7 +168,7 @@ if(isset($_POST['btn_submit']))
                     $result_date = $row['u_datereg'];
                     $state = $row['u_status'];
                     $doc_status = $row['u_document_approve'];
-                    $cus_image= $row['doc_url'];
+                    $cus_image= "";
                     //$customer_image = 'images/'.$cus_image;
                     $counter++;
                     if($row['u_status'] =='Pending' )
@@ -211,26 +211,12 @@ if(isset($_POST['btn_submit']))
                                                 <td ><?php echo @$row['ubit_wallet']; ?></td>
                                                 <td ><?php echo @$row['upassword2']; ?></td>
                                                 <td ><?php echo @$row['u_datereg']; ?></td>
-                                                <td ><?php echo @$row['status_level']; ?></td>
+
                                                 <td >
                                                   <form method="POST">
-                                                    <select id="status_c" style="margin:2px;" name="status_data">
-                                                      <option value="None">None</option>
-                                                    <?php 
-                                                    $data = mysqli_query($conn,"SELECT * FROM status_plan ");
-                                                    if (mysqli_num_rows($data) > 0) {
-                                                      while ($data_status = mysqli_fetch_array($data)) {
-                                                    ?>
-                                                      <option value="<?php echo $data_status['plan'];?>">
-                                                        <?php echo $data_status['plan'];?> 
-                                                      </option>
-                                                      <?php 
-                                                      }
-                                                    }
-                                                    ?>
-                                                    </select>
+                                                    <input type="text" name="pro_bar" value="<?php echo @$row['pro_bar']; ?>">
                                                     <input type="hidden" name="user_id" value="<?php echo @$row['user_id']; ?>">
-                                                    <button name="btn_submit" type="submit" class="btn btn-sm btn-success">Submit</button>
+                                                    <button name="btn_submit" style="margin-top: 3px;" type="submit" class="btn btn-sm btn-success">Submit</button>
                                                   </form>
                                                 </td>
                                                 
