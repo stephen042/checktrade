@@ -78,104 +78,98 @@ include('session.php');
                     $subject = "Trade Credit Transaction Alert";
                     
                     // Create the body message
-                    @$message .= "<br>
-                    <div style='font-family:HelveticaNeue-Light,Arial,sans-serif;background-color:#eeeeee'>
-                <table align='center' width='100%' border='0' cellspacing='0' cellpadding='0' bgcolor='#eeeeee'>
-                <tbody>
-                    <tr>
-                    <td bgcolor='#FFFFFF'>
-                            <table align='center' width='750px' border='0' cellspacing='0' cellpadding='0' bgcolor='#eeeeee' style='width:750px!important'>
-                            <tbody>
-                            <tr>
-                                <td>
-                                <table width='690' align='center' border='0' cellspacing='0' cellpadding='0' bgcolor='#eeeeee'>
-                                        <tbody>
-                                            <tr>
-                                                <td align='center'>
-                                                    <table width='630' align='center' border='0' cellspacing='0' cellpadding='0'>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td colspan='3' height='60'></td></tr><tr><td width='25'></td>
-                                                            <td align='center'>
-                                                            <h6 style='font-family:HelveticaNeue-Light,arial,sans-serif;font-size:25px;color:#404040;line-height:48px;font-weight:bold;margin:0;padding:0'>Deposit Transaction</h6>
-                                                            </td>
-                                                            <td width='25'></td>
-                                                        </tr>
-                                                        <tr>
-                                                        <td colspan='3' height='40'></td></tr><tr>
-                                                            <td colspan='5' align='center'>
-                                                                <p style='color:#404040;font-size:16px;line-height:24px;font-weight:lighter;padding:0;margin:0'>
-                                    Hello $name, Your account has be credited with USD$trade_profit. This will reflect in your account in the next few minutes.</p>
-                                                                <br>
-                                                                <p style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'></p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                        <td colspan='4'>
-                                                            <div style='width:100%;text-align:center;margin:30px 0'>
-                                                                <table align='center' cellpadding='0' cellspacing='0' style='font-family:HelveticaNeue-Light,Arial,sans-serif;margin:0 auto;padding:0'>
-                                                                <tbody>
-                                                                <tr>
-                                                                        <td align='center' style='margin:0;text-align:center'><a href='<?php echo APP_URL ; ?>' style='font-size:21px;line-height:22px;text-decoration:none;color:#ffffff;font-weight:bold;border-radius:2px;background-color:#0096d3;padding:14px 40px;display:block;letter-spacing:1.2px' target='_blank'>Click here to login</a></td>
-                                                                    </tr>
-                                                                </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                            </tbody>
-                                                </table>
-                                        </td>
-                                    </tr>
-                                        
-                                        <tr bgcolor='#ffffff'>
-                                            <td bgcolor='#FFFFFF'>
-                                            
-                                            <table width='570' align='center' border='0' cellspacing='0' cellpadding='0'>
-                                                <tbody>
-                                                <tr>
-                                                    <td>
-                                                    <h2 style='color:#404040;font-size:22px;font-weight:bold;line-height:26px;padding:0;margin:0'>&nbsp;</h2>
-                                                    <div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'>You can always contact us for any support or write us an email on support@checkedtradespro.online </div>
-                                                    </td>
-                                                </tr>
-                                                <tr><td>&nbsp;</td>
-                                            </tr></tbody></table></td>
-                                        </tr>
-                                        </tbody>
-                                        </table>
-                                    <table align='center' width='750px' border='0' cellspacing='0' cellpadding='0' bgcolor='#eeeeee' style='width:750px!important'>
-                                        <tbody>
-                                        <tr>
-                                            <td align='center'>
-                                                    <table width='630' align='center' border='0' cellspacing='0' cellpadding='0' bgcolor='#eeeeee'>
-                                                    <tbody>
-                                                    <tr><td colspan='2' height='30'></td></tr>
-                                                        <tr>
-                                                        <td width='360' valign='top'>&nbsp;</td>
-                                                            <td align='right' valign='top'>
-                                                            <span style='line-height:20px;font-size:10px'><a href='#'><img src='http://i.imgbox.com/BggPYqAh.png' alt='fb'></a>&nbsp;</span>
-                                                                <span style='line-height:20px;font-size:10px'><a href='#'><img src='http://i.imgbox.com/j3NsGLak.png' alt='twit'></a>&nbsp;</span>
-                                                                <span style='line-height:20px;font-size:10px'><a href='#'><img src='http://i.imgbox.com/wFyxXQyf.png' alt='g'></a>&nbsp;</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr><td colspan='2' height='5'></td></tr>
-                                                    </tbody>
-                                                    </table>
-                                                <p><span style='color:#a3a3a3;font-size:12px;line-height:12px;padding:0;margin:0'>&copy; 2020 Checked Trades PRO. All Rights Reserved. </span></p></td>
-                                    </tr>
-                                        </tbody>
-                                    </table>
+                    @$message .= '<!DOCTYPE html>
+                    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+                    <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width,initial-scale=1">
+                      <meta name="x-apple-disable-message-reformatting">
+                      <title></title>
+                      <!--[if mso]>
+                      <noscript>
+                        <xml>
+                          <o:OfficeDocumentSettings>
+                            <o:PixelsPerInch>96</o:PixelsPerInch>
+                          </o:OfficeDocumentSettings>
+                        </xml>
+                      </noscript>
+                      <![endif]-->
+                      <style>
+                        table, td, div, h1, p {font-family: Arial, sans-serif;}
+                        button{
+                            font: inherit;
+                            background-color: #FF7A59;
+                            border: none;
+                            padding: 10px;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-weight: 700; 
+                            color: white;
+                            border-radius: 5px; 
+                            box-shadow: 1px 2px #d94c53;
+                          }
+                      </style>
+                    </head>
+                    <body style="margin:0;padding:0;">
+                      <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+                        <tr>
+                          <td align="center" style="padding:0;">
+                            <table role="presentation" style="width:602px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
+                              <tr>
+                                <td align="center" style="padding:30px 0 30px 0;background:#70bbd9;">
+                                  <img src="https://checkedtradespro.online/app/CoinSmart-Logo-Light.png" alt="" width="150" style="height:auto;display:block;" />
                                 </td>
-                            </tr>
-                            </tbody>
+                              </tr>
+                              <tr style="background-color: #eeeeee;">
+                                <td style="padding:36px 30px 42px 30px;">
+                                  <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                    <tr>
+                                      <td style="padding:0 0 36px 0;color:#153643;">
+                                        <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Trade Credit Transaction Alert</h1>
+                                        <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">													Hello '.$name.', Your account has be credited with USD'.$trade_profit.'. This will reflect in your account in the next few minutes. </p>
+                                        <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                            <a href="https://checkedtradespro.online/app/account/login.php" style="color:#ee4c50;text-decoration:underline;"> 
+                                                <button> 
+                                                    Click here to login
+                                                </button>  
+                                            </a>
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:30px;background:#ee4c50;">
+                                  <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
+                                    <tr>
+                                      <td style="padding:0;width:50%;" align="left">
+                                        <p style="margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
+                                          &reg; 2020 copyright checkedtradespro<br/><a href="http://www.example.com" style="color:#ffffff;text-decoration:underline;">visit site</a>
+                                        </p>
+                                      </td>
+                                      <td style="padding:0;width:50%;" align="right">
+                                        <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
+                                          <tr>
+                                            <td style="padding:0 0 0 10px;width:38px;">
+                                              <a href="http://www.twitter.com/" style="color:#ffffff;"><img src="https://assets.codepen.io/210284/tw_1.png" alt="Twitter" width="38" style="height:auto;display:block;border:0;" /></a>
+                                            </td>
+                                            <td style="padding:0 0 0 10px;width:38px;">
+                                              <a href="http://www.facebook.com/" style="color:#ffffff;"><img src="https://assets.codepen.io/210284/fb_1.png" alt="Facebook" width="38" style="height:auto;display:block;border:0;" /></a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
                             </table>
-                        </td>
-                </tr>
-                </tbody>
-                </table>
-                </div>";
+                          </td>
+                        </tr>
+                      </table>
+                    </body>
+                    </html>';
                     $header = "From:Checked Trades PRO <noreply@checkedtradespro.online> \r\n";
                     $header .= "Cc:noreply@checkedtradespro.online \r\n";
                     $header .= "MIME-Version: 1.0\r\n";
