@@ -34,7 +34,7 @@ include('session.php');
         $result = mysqli_query($conn, " INSERT INTO status_plan (plan, price, duration) VALUES ('$plan','$amount','$duration')");
 
         if ($result) {
-            echo '<script>window.alert("Status Plan Created Successfully")</script>';
+            echo '<script>window.alert("Plan Created Successfully")</script>';
         }else{
             echo '<script>window.alert("An error occurred")</script>';
         }
@@ -138,8 +138,6 @@ include('session.php');
                   </li>
                   <li class=""><a href="users-deposit"><i class="fa fa-magnet"></i> User Deposit</a>
                   </li>
-                  <li><a href="users-sub-deposit"><i class="fa fa-magnet"></i> User Sub Deposit</a>
-                  </li>
                   <li><a href="users-withdrawal"><i class="fa fa-magnet"></i> Withdrawal</a>
                   </li>
                   <li class="active" ><a href="sub-plans"><i class="fa fa-magnet"></i> Subscription Plans</a>
@@ -175,110 +173,7 @@ include('session.php');
                 <h3><i class="fa fa-credit-card"></i> User Subscription Plan Tables </h3>
               </div>
               
-            </div>
-
-            
-            <br><br>
-            <?php 
-            $query = mysqli_query($conn, "SELECT * FROM ai_plan order by id DESC");
-            $row = mysqli_fetch_array($query);
-            $num_row = mysqli_num_rows($query);
-                  
-            ?>
-           <div class="col-md-12 col-sm-12 col-xs-12">
-           <hr style="border: 2px solid lightgrey;">
-            <h2 class="text-primary">Create AI Plans</h2>
-            <hr>
-            
-            <!-- Vertical Form -->
-            <!-- <center> -->
-            <form method="post" class="row g-3" style="width: 90%;padding:20px;">
-                <div class="col-4">
-                  <label for="inputNanme4" class="form-label">Plan Name <span class="text-danger">*eg = AI~TOOL Pro</span></label>
-                  <input type="text" class="form-control" name="plan" id="inputNanme4" placeholder="plan name here" required>
-                </div>
-                <div class="col-6" style="margin-top: 10px;">
-                  <label for="inputEmail4" class="form-label">Price <span class="text-danger">*eg = 300 No $ sign</span></label>
-                  <input type="text" class="form-control" name="price" id="inputEmail4" placeholder="Amount here" required>
-                </div>
-                <div class="col-6" style="margin-top: 10px;">
-                  <label for="inputPassword4" class="form-label">Win Rate <span class="text-danger">*eg = 70 is over 70/100 </span></label>
-                  <input type="text" class="form-control" name="win_rate" id="inputPassword4" placeholder="win rate here" required>
-                </div>
-                <div class="col-6" style="margin-top: 10px;">
-                  <label for="inputAddress" class="form-label">Duration <span class="text-danger">*eg = 3 days or 1 day</span></label>
-                  <input type="text" class="form-control" name="duration" id="inputAddress" placeholder="1 day or 3 days" required>
-                </div>
-                <div class="text-center" style="margin-top: 20px;">
-                  <button type="submit" name="create_ai" class="btn btn-primary">Submit</button>
-                  <button type="reset" class="btn btn-secondary">Reset</button>
-                </div>
-            </form>
-            <hr>
-            <!-- </center> -->
-            <!-- Vertical Form -->
-                    <div class="table-responsive">
-                      <table class="table table-striped jambo_table bulk_action">
-                        <thead>
-                          <tr class="headings">
-                          
-                            <th class="column-title">#</th>
-                            <th class="column-title">Plan Name</th>
-                            <th class="column-title">Price</th>
-                            <th class="column-title">Win_rate</th>
-                            <th class="column-title">Duration</th>
-                            <th class="column-title">Action</th>
-                            <th></th>
-
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                          <?php
-                    if ($num_row > 0) 
-                    {
-                  $query_st = mysqli_query($conn," SELECT * FROM  ai_plan order by id DESC");
-                  $counter = 0;
-                  while($data = mysqli_fetch_array($query_st)){
-                    
-                    $counter++;
-                    
-                      ?>
-                        <tr class="odd gradeX">
-                        <td><?php echo $counter; ?></td>
-                        <td><?php echo $data['plan']?></td>
-                        <td><?php echo $data['price']?></td>
-                        <td><?php echo $data['win_rate']?></td>
-                        <td ><?php echo $data['duration'] ?></td>
-                      
-                      <td style="display: flex;">
-                      <form method="post">
-                        <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
-                        <button class="btn btn-round btn-xs btn-danger" name="delete_ai" type="submit">
-                            <i class="fa fa-times"> delete</i>
-                        </button>
-                      </form>
-                      </tr>
-                      <?php 
-                        }
-                          }
-                    else
-                        { 
-                      ?>    
-                        <tr class="odd gradeX">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td ></td>
-                            <td ></td>
-                        </tr>
-                      <?php }?>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+  </div>
 
 
 <!--- For status Plans ------------------------------------------------------------------------------ -->

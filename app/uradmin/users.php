@@ -93,6 +93,8 @@ if(isset($_POST['btn_submit']))
                   </li>
                   <li><a href="users-withdrawal"><i class="fa fa-magnet"></i> Withdrawal</a>
                   </li>
+                  <li><a href="sub-plans"><i class="fa fa-credit-card"></i>Subscription Plans</a>
+                  </li>
                   <li><a href="yearly-forcast"><i class="fa fa-magnet"></i> Yearly Forecast Report</a>
                   </li>
                   <li><a href="stats"><i class="fa fa-magnet"></i> Statistics (Charts)</a>

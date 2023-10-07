@@ -108,6 +108,8 @@ $success_message ="";
                   </li>
                   <li class=""><a href="users-withdrawal"><i class="fa fa-magnet"></i> Withdrawal</a>
                   </li>
+                  <li><a href="sub-plans"><i class="fa fa-credit-card"></i>Subscription Plans</a>
+                  </li>
                   <li class=""><a href="yearly-forcast"><i class="fa fa-magnet"></i> Yearly Forecast Report</a>
                   </li>
                   <li class=""><a href="stats"><i class="fa fa-magnet"></i> Statistics (Charts)</a>

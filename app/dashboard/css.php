@@ -26,5 +26,4 @@
     }
 </style>
 
-<!--chat bot-->
-<script src="//code.jivosite.com/widget/wsoh58jbyN" async></script>
+

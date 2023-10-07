@@ -182,7 +182,7 @@
 													                    </form>
 													                    <h4><span class="text-warning">Referral Link:</span>  
                                                 <span id="p1"> 
-                                                  <?php echo 'https://primeoptionpro.online/register.php?ref=' . $username ?> 
+                                                  <?php echo 'https://checkedtradespro.online/app/account/register.php?ref=' . $username ?> 
                                               </span>
 
 													                      <button class="ui button primal float-right" onClick="copyToClipboard('#p1')">Copy Referral Link</button>
@@ -202,7 +202,7 @@
 													                        <li>Utility Bills</li>
 													                      </ul>
 													                      Click here to upload document
-													                      <a href="mailto:support@primeoptionpro.online" target="_blank"><button class="ui button primal float-right" name="profile_btn">Upload Document</button></a>
+													                      <a href="mailto:support@checkedtradespro.online" target="_blank"><button class="ui button primal float-right" name="profile_btn">Upload Document</button></a>
 													                    </div>
 
 													                  </div>

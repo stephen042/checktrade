@@ -36,11 +36,11 @@ $userdetails = mysqli_fetch_array($user);
 						<i class="fa fa-check-circle" style="color: #0f0;"></i> online
 					</span> -->
 					<a class="ui button op link a-green-hover" href="logout.php">
-						<i class="fa fa-power-off"></i> Exit
+						<i class="fa fa-power-off text-danger"></i> Exit
 					</a>
 					<span style="color:#0f0" class="blinkgreen">
-						<i class="fa fa-money" style="color: #0f0;"></i> 
-						Net Bal: <?php echo $withdral_pending. '.00 USD'; ?>
+						<!--<i class="fa fa-money" style="color: #0f0;"></i> -->
+						Net Bal:<?php echo '$'.$withdral_pending. '.00'; ?>
 					</span>
 						
 				</div>
